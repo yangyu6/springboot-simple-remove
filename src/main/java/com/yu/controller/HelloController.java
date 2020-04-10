@@ -1,6 +1,6 @@
-package com.onion.web.controller;
+package com.yu.controller;
 
-import com.onion.common.utils.Res;
+import com.yu.common.utils.Res;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;

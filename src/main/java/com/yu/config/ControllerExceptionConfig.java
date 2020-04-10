@@ -1,7 +1,7 @@
-package com.onion.config;
+package com.yu.config;
 
-import com.onion.common.utils.BaseException;
-import com.onion.common.utils.Res;
+import com.yu.common.utils.BaseException;
+import com.yu.common.utils.Res;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

@@ -1,4 +1,4 @@
-package com.onion.common.utils;
+package com.yu.common.utils;
 
 import lombok.Data;
 

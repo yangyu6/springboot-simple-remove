@@ -14,9 +14,9 @@
 
         <!-- 数据库连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://47.114.161.233:3306/powerbank?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8"
+                        connectionURL="jdbc:mysql://172.16.1.137:3306/tms?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8"
                         userId="root"
-                        password="1234">
+                        password="123456">
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
@@ -25,7 +25,7 @@
         </javaTypeResolver>
 
         <!-- 数据表对应的model层  -->
-        <javaModelGenerator targetPackage="com.onion.model" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.yu.model" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
@@ -36,13 +36,13 @@
         </sqlMapGenerator>
 
         <!-- mybatis3中的mapper接口 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.onion.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yu.dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
         <!-- 数据表进行生成操作 schema:相当于库名; tableName:表名; domainObjectName:对应的DO -->
-         <table tableName="user"
-                domainObjectName = "user"
+         <table tableName="tms_claim_detail"
+                domainObjectName = "ClaimDetailBean"
                 enableCountByExample="false" enableUpdateByExample="false"
                 enableDeleteByExample="false" enableSelectByExample="false"
                 selectByExampleQueryId="false">

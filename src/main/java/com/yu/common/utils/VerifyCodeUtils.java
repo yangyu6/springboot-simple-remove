@@ -1,7 +1,6 @@
-package com.onion.common.utils;
+package com.yu.common.utils;
 
 import javax.imageio.ImageIO;
-import javax.servlet.ServletOutputStream;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;

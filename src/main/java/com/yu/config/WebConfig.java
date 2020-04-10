@@ -1,4 +1,4 @@
-package com.onion.config;
+package com.yu.config;
 
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
