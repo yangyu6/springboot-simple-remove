@@ -78,9 +78,9 @@ public class MybatisCodeGenerator {
         };
 
         // 如果模板引擎是 freemarker
-        //String templatePath = "/templates/mapper.xml.ftl";
-        // 如果模板引擎是 velocity
-         String templatePath = "/templates/mapper.xml.vm";
+        String templatePath = "/templates/mapper.xml.ftl";
+        // 如果模板引擎是 velocityu
+        // String templatePath = "/templates/mapper.xml.vm";
 
         // 自定义输出配置
         List<FileOutConfig> focList = new ArrayList<>();
