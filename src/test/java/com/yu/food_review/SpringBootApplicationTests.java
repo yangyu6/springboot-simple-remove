@@ -1,6 +1,5 @@
 package com.yu.food_review;
 
-import org.json.JSONException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,8 +9,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SpringBootApplicationTests {
 
+
+
     @Test
-    public void contextLoads() throws JSONException {
+    public void contextLoads()  {
+
     }
 
 }
