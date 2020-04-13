@@ -5,9 +5,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -96,6 +94,16 @@ public final class RedisUtil {
     }
 
     /**
+     * 批量获取
+     *
+     * @param keyList key列表
+     * @return 值列表
+     */
+    public List<Object> multiGet(List<String> keyList) {
+        return keyList == null || keyList.isEmpty() ? new ArrayList<>() : redisTemplate.opsForValue().multiGet(keyList);
+    }
+
+    /**
      * 普通缓存放入
      *
      * @param key   键
@@ -105,6 +113,22 @@ public final class RedisUtil {
     public boolean set(String key, Object value) {
         try {
             redisTemplate.opsForValue().set(key, value);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 批量插入
+     *
+     * @param map 键值对 map
+     * @return true成功 false失败
+     */
+    public boolean multiSet(Map<String, Object> map) {
+        try {
+            redisTemplate.opsForValue().multiSet(map);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
