@@ -4,4 +4,5 @@
 
 目前整合：
 1. redis
-2. swagger
+2. mybtis-plus
+3. swagger
